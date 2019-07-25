@@ -4,6 +4,7 @@ public class Category {
 
     private String  Nama;
     private String Image;
+    private String Description;
 
 
     public Category() {
@@ -11,11 +12,11 @@ public class Category {
     }
 
 
-    public Category(String nama, String image) {
+    public Category(String nama, String image, String decription) {
 
         Nama = nama;
-
         Image = image;
+        Description = decription;
     }
 
     public String getNama() {
@@ -29,22 +30,33 @@ public class Category {
 
     }
     public String getImage() {
+
         return Image;
 
     }
-    public void setImage (String image) {
 
+    public void setImage(String image)
+
+    {
         Image = image;
-
 
     }
 
 
+    public String getDescription() {
 
+        return Description;
 
+    }
 
+    public void setDescription(String description)
 
+    {
+        Description = description;
+
+    }
 
 
 
 }
+
