@@ -34,7 +34,7 @@ public class Category {
     }
     public void setImage (String image) {
 
-        Nama = image;
+        Image = image;
 
 
     }
