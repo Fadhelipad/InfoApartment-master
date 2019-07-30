@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background2"
-    tools:context=".SignUp">
+    tools:context="com.example.infoApartment.SignUp">
 
 
 
@@ -27,12 +27,10 @@
             android:layout_height="wrap_content"
             android:hint="Phone Number"
             android:inputType="phone"
-            android:text="001"
             android:textColor="#000000"
             android:textColorHint="#FFFFCC99"
             android:textSize="34dp"
             app:met_baseColor="#000"
-            app:met_maxCharacters="11"
             app:met_primaryColor="#FFFFCC99"
             app:met_singleLineEllipsis="true"
 
@@ -44,12 +42,10 @@
             android:layout_height="wrap_content"
             android:hint="Nama"
             android:inputType="text"
-            android:text="Tom Cruuise"
             android:textColor="#000000"
             android:textColorHint="#FFFFCC99"
             android:textSize="34dp"
             app:met_baseColor="#000"
-            app:met_maxCharacters="11"
             app:met_primaryColor="#FFFFCC99"
             app:met_singleLineEllipsis="true"
 
@@ -60,12 +56,10 @@
             android:layout_height="wrap_content"
             android:hint="Password"
             android:inputType="textPassword"
-            android:text="1234567"
             android:textColor="#000000"
             android:textColorHint="#FFFFCC99"
             android:textSize="34dp"
             app:met_baseColor="#000"
-            app:met_maxCharacters="11"
             app:met_primaryColor="#FFFFCC99"
             app:met_singleLineEllipsis="true"
 

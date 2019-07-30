@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background2"
-    tools:context=".SignIn">
+    tools:context="com.example.infoApartment.SignIn">
 
 
 
@@ -27,12 +27,11 @@
             android:layout_height="wrap_content"
             android:hint="Phone Number"
             android:inputType="phone"
-            android:text="001"
+            android:text=""
             android:textColor="#000000"
             android:textColorHint="#FFFFCC99"
             android:textSize="34dp"
             app:met_baseColor="#000"
-            app:met_maxCharacters="11"
             app:met_primaryColor="#FFFFCC99"
             app:met_singleLineEllipsis="true"
 
@@ -43,12 +42,11 @@
             android:layout_height="wrap_content"
             android:hint="Password"
             android:inputType="textPassword"
-            android:text="Tom linglin"
+            android:text=""
             android:textColor="#000000"
             android:textColorHint="#FFFFCC99"
             android:textSize="34dp"
             app:met_baseColor="#000"
-            app:met_maxCharacters="11"
             app:met_primaryColor="#FFFFCC99"
             app:met_singleLineEllipsis="true"
 

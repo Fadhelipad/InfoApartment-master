@@ -1,4 +1,4 @@
-package com.example.infokavling;
+package com.example.infoApartment;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,7 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.infokavling.Model.User;
+import com.example.infoApartment.Model.User;
+import com.example.infoApartment.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -35,6 +36,7 @@ public class SignIn extends AppCompatActivity {
         final FirebaseDatabase database =FirebaseDatabase.getInstance();
         final DatabaseReference table_user = database.getReference("User");
 
+
         btnSignin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -56,6 +58,7 @@ public class SignIn extends AppCompatActivity {
                             //get user information
 
                             User user = dataSnapshot.child(edtPhone.getText().toString()).getValue(User.class);
+
                             if (user.getPassword().equals(edtPassword.getText().toString())) {
                                 Toast.makeText(SignIn.this, "Sign in Successfully", Toast.LENGTH_SHORT).show();
                                 Intent homeIntent = new Intent(SignIn.this, MenuUtama.class);

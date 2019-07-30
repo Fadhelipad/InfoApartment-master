@@ -1,16 +1,17 @@
-package com.example.infokavling;
+package com.example.infoApartment;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.infokavling.Model.User;
+import com.example.infoApartment.Model.User;
+import com.example.infoApartment.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -42,27 +43,37 @@ public class SignUp extends AppCompatActivity {
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final ProgressDialog mDialog  = new ProgressDialog(SignUp.this);
+                final ProgressDialog mDialog = new ProgressDialog(SignUp.this);
                 mDialog.setMessage("Mohon Tunggu");
                 mDialog.show();
+                mDialog.dismiss();
 
 
                 table_user.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        if(dataSnapshot.child(edtPhone.getText().toString()).exists())
-                        {
+                        if (dataSnapshot.child(edtPhone.getText().toString()).exists()) {
                             mDialog.dismiss();
-                            Toast.makeText(SignUp.this,"Phone Number sudah ada",Toast.LENGTH_SHORT).show();
-                        }
-                        else
-                        {
+
+                            Toast.makeText(SignUp.this, "Phone Number Telah Terdaftar", Toast.LENGTH_SHORT).show();
+                            mDialog.show();
                             mDialog.dismiss();
-                            User user = new User(edtName.getText().toString(),edtPassword.getText().toString());
+
+
+                        } else {
+                            User user = new User(edtName.getText().toString(), edtPassword.getText().toString());
                             table_user.child(edtPhone.getText().toString()).setValue(user);
-                            Toast.makeText(SignUp.this,"Sign up successfully !", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SignUp.this, "Sign up successfully !", Toast.LENGTH_SHORT).show();
+                            mDialog.dismiss();
+                            Intent homeIntent = new Intent(SignUp.this, SignIn.class);
+                            Common.currentUser = user;
+                            startActivity(homeIntent);
                             finish();
+                            mDialog.dismiss();
+
+
                         }
+                        mDialog.dismiss();
                     }
 
                     @Override
@@ -70,6 +81,7 @@ public class SignUp extends AppCompatActivity {
 
                     }
                 });
+                mDialog.dismiss();
 
             }
         });

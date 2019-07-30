@@ -1,14 +1,12 @@
-package com.example.infokavling;
+package com.example.infoApartment;
 
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.example.infokavling.Interface.ItemClickListener;
-import com.example.infokavling.Model.Category;
-import com.example.infokavling.ViewHolder.MenuViewHolder;
+import com.example.infoApartment.Model.Category;
+import com.example.infoApartment.Interface.ItemClickListener;
+import com.example.infoApartment.ViewHolder.MenuViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
 import android.view.Menu;
 import android.view.View;
@@ -18,7 +16,6 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 
 import android.view.MenuItem;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.database.DatabaseReference;
@@ -31,8 +28,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import static com.squareup.picasso.Picasso.*;
 
 public class MenuUtama extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -65,14 +60,6 @@ public class MenuUtama extends AppCompatActivity
         category = database.getReference("Category");
 
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -117,7 +104,7 @@ public class MenuUtama extends AppCompatActivity
                     @Override
                     public void onClick(View view, int position, boolean isLongCLick) {
                        //Start pindah activity
-                        Intent KavlingDetail = new Intent(MenuUtama.this, KavlingDetail.class);
+                        Intent KavlingDetail = new Intent(MenuUtama.this, ApartementDetail.class);
                         KavlingDetail.putExtra("CategoryId",adapter.getRef(position).getKey());
                         startActivity(KavlingDetail);
 
@@ -161,14 +148,27 @@ public class MenuUtama extends AppCompatActivity
         if (id == R.id.nav_home) {
             // Handle the camera action
         } else if (id == R.id.nav_home) {
+            Intent mainIntent = new Intent(this, MenuUtama.class);
+            startActivity(mainIntent);
 
-        } else if (id == R.id.nav_booking) {
 
-        } else if (id == R.id.nav_history) {
+        } else if (id == R.id.nav_contactUs) {
+            Intent mainIntent = new Intent(this, ContactUs.class);
+            startActivity(mainIntent);
 
         } else if (id == R.id.nav_about) {
+            Intent mainIntent = new Intent(this, About.class);
+            startActivity(mainIntent);
+
+
 
         } else if (id == R.id.nav_keluar) {
+
+            Intent mainIntent = new Intent(this, MainMenu.class);
+            startActivity(mainIntent);
+            finish();
+
+
 
         }
 

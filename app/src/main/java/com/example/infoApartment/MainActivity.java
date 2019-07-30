@@ -1,9 +1,11 @@
-package com.example.infokavling;
+package com.example.infoApartment;
 
 import android.content.Intent;
 import android.os.Handler;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.infoApartment.R;
 
 public class MainActivity extends AppCompatActivity {
 

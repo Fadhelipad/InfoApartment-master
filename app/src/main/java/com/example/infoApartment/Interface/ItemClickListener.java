@@ -1,4 +1,4 @@
-package com.example.infokavling.Interface;
+package com.example.infoApartment.Interface;
 
 import android.view.View;
 

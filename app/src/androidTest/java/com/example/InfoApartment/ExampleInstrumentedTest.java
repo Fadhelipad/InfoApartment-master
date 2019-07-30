@@ -1,4 +1,4 @@
-package com.example.infokavling;
+package com.example.InfoApartment;
 
 import android.content.Context;
 

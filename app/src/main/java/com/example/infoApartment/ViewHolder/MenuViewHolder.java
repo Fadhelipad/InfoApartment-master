@@ -1,4 +1,4 @@
-package com.example.infokavling.ViewHolder;
+package com.example.infoApartment.ViewHolder;
 
 import android.view.View;
 import android.widget.ImageView;
@@ -6,13 +6,13 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.infokavling.Interface.ItemClickListener;
-import com.example.infokavling.R;
+import com.example.infoApartment.Interface.ItemClickListener;
+import com.example.infoApartment.R;
 
 
 public class MenuViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener
 
-{
+    {
 
     public TextView txtMenuName;
     public ImageView imageView;

@@ -1,4 +1,4 @@
-package com.example.infokavling;
+package com.example.infoApartment;
 
 import org.junit.Test;
 
