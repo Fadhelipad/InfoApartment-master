@@ -21,7 +21,7 @@ import com.rengwuxian.materialedittext.MaterialAutoCompleteTextView;
 
 public class SignIn extends AppCompatActivity {
     EditText edtPhone,edtPassword;
-    Button btnSignin;
+    Button btnmasuk;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,14 +30,14 @@ public class SignIn extends AppCompatActivity {
 
         edtPassword = (MaterialAutoCompleteTextView)findViewById(R.id.editPassword);
         edtPhone  =(MaterialAutoCompleteTextView) findViewById(R.id.editphone);
-        btnSignin =(Button)findViewById(R.id.btn_SignIn);
+        btnmasuk =(Button)findViewById(R.id.btn_masuk);
 
 
         final FirebaseDatabase database =FirebaseDatabase.getInstance();
         final DatabaseReference table_user = database.getReference("User");
 
 
-        btnSignin.setOnClickListener(new View.OnClickListener() {
+        btnmasuk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 final ProgressDialog mDialog  = new ProgressDialog(SignIn.this);
@@ -61,9 +61,9 @@ public class SignIn extends AppCompatActivity {
 
                             if (user.getPassword().equals(edtPassword.getText().toString())) {
                                 Toast.makeText(SignIn.this, "Sign in Successfully", Toast.LENGTH_SHORT).show();
-                                Intent homeIntent = new Intent(SignIn.this, MenuUtama.class);
+                                Intent intent = new Intent(SignIn.this, MenuUtama.class);
                                 Common.currentUser = user;
-                                startActivity(homeIntent);
+                                startActivity(intent);
                                 finish();
 
 

@@ -54,7 +54,7 @@
     </LinearLayout>
 
         <Button
-            android:id="@+id/btn_SignIn"
+            android:id="@+id/btn_masuk"
             android:text="Sign In"
             android:textColor="#ffff"
             android:layout_marginRight="8dp"
