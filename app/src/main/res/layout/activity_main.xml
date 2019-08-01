@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffff"
+    android:background="#fff"
     tools:context="com.example.infoApartment.MainActivity">
 
     <LinearLayout
@@ -22,7 +22,7 @@
             android:layout_width="240dp"
             android:layout_height="240dp"
             android:layout_gravity="center"
-            android:background="@drawable/infoapartement"
+            android:background="@drawable/apartment1"
             android:orientation="horizontal"
 
             />
@@ -33,6 +33,7 @@
             android:layout_gravity="center"
             android:text="Info Apartment"
             android:textSize="40dp"
+            android:textColor="#000"
 
 
             />

@@ -20,17 +20,17 @@
     <ImageView
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:src="@drawable/infoapartement"
+        android:src="@drawable/apartment1"
 
         />
 
         <TextView
             android:id="@+id/text"
-            android:layout_width="200dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Info Apartment"
-            android:textSize="40dp"
-            android:textColor="#000000"
+            android:textSize="30dp"
+            android:textColor="#000"
             android:gravity="center"
             />
 
@@ -51,12 +51,13 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         />
+
         <Button
-        android:id="@+id/btn_SignIn"
-        android:text="Sign In"
-        android:layout_weight="1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content" />
+            android:id="@+id/btn_SignIn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Sign In" />
 
     </LinearLayout>
    

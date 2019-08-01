@@ -6,9 +6,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/infoapartement"
-        android:label="Info Apartement"
-        android:roundIcon="@drawable/infoapartement"
+        android:icon="@drawable/apartment1"
+        android:label="Info Apartment"
+        android:roundIcon="@drawable/apartment1"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name="com.example.infoApartment.About" />
